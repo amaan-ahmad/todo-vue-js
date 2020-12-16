@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trying vue</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="app">
+        <h2>{{title}}</h2>
+        <ol type="1">
+          <li v-for="todo in todos">{{ todo }}</li>
+        </ol>
+        <br />
+        <input v-bind:class="{'text-warn': shouldWarn}" v-model="newTodo" />
+        <button v-on:click="createNewTodo">Add</button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
